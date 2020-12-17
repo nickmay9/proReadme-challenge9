@@ -41,24 +41,21 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  const section = {
-    unlicense: 'https://unlicense.org/',
-    MIT: 'https://choosealicense.com/licenses/mit/',
-    GNU: 'https://www.gnu.org/licenses/'
-  };
+
   switch (license) {
     case 'Unlicense':
-      fs.readFile('./assets/unlicense.txt', 'utf8', (err, data) => {
+      return fs.readFileSync('./assets/unlicense.txt', 'utf8', (err, data) => {
         if(err) throw err;
-        return data;
+        return data;        
       });
+      
     case 'MIT':
-      fs.readFile('./assets/MIT.txt', 'utf8', (err, data) => {
+      return fs.readFileSync('./assets/MIT.txt', 'utf8', (err, data) => {
         if(err) throw err;
         return data;
       });
     case 'GNU GPLv3':
-      fs.readFile('./assets/GNU.txt', 'utf8', (err, data) => {
+      return fs.readFileSync('./assets/GNU.txt', 'utf8', (err, data) => {
         if(err) throw err;
         return data;
       });
@@ -68,34 +65,39 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+
   return `# ${data.projectTitle}
 
-  ## Description
-  ${data.description}
+## Description
+${data.description}
 
-  ## Table of Contents
-  * [Installation] (#installation)
-  * [Usage](#usage)
-  * [Contributing](#contributing)
-  * [Tests](#tests)
-  * [License](#license)
-  
-  ## Installation
-  ${data.install}
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [License](#license)
+* [Questions](#questions)
 
-  ## Usage
-  ${data.usage}
+## Installation
+${data.install}
 
-  ## Contributing
-  ${data.contributor}
+## Usage
+${data.usage}
 
-  ## Tests
-  ${data.test}
+## Contributing
+${data.contributor}
 
-  ## License
-  ![badge image](${renderLicenseBadge(data.license)})
-  [link to license!](${renderLicenseLink(data.license)})
-  ${renderLicenseSection(data.license)}
+## Tests
+${data.test}
+
+## License
+![badge image](${renderLicenseBadge(data.license)})
+[link to license!](${renderLicenseLink(data.license)})
+${renderLicenseSection(data.license)}
+
+## Questions
+If you have any questions you can find me on [GitHub](https://github.com/${data.githubUsername}) or you can email me at ${data.email}.
 `;
 }
 

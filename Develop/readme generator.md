@@ -1,4 +1,4 @@
-# readme generator
+# ReadMe Generator
 
   ## Description
   This is the description.
@@ -12,7 +12,7 @@
   * [License](#license)
   
   ## Installation
-  This is the install instructions.
+  This is the installation instructions.
 
 
   ## Usage
@@ -28,6 +28,6 @@
 
 
   ## License
-
-
-
+  ![badge image](https://img.shields.io/badge/license-MIT-blue)
+  [link to license!](https://choosealicense.com/licenses/mit/)
+  

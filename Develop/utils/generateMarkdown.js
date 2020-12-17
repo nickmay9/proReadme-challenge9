@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -46,11 +48,20 @@ function renderLicenseSection(license) {
   };
   switch (license) {
     case 'Unlicense':
-      return section.unlicense;
+      fs.readFile('./assets/unlicense.txt', 'utf8', (err, data) => {
+        if(err) throw err;
+        return data;
+      });
     case 'MIT':
-      return section.MIT;
+      fs.readFile('./assets/MIT.txt', 'utf8', (err, data) => {
+        if(err) throw err;
+        return data;
+      });
     case 'GNU GPLv3':
-      return section.GNU;
+      fs.readFile('./assets/GNU.txt', 'utf8', (err, data) => {
+        if(err) throw err;
+        return data;
+      });
   }
   return '';
 }

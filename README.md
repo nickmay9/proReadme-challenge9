@@ -1,6 +1,6 @@
 # README Generator Challenge 9  
 ![badge image](https://img.shields.io/badge/license-unlicense-blue)  
-[Link to license!](https://unlicense.org/) 
+[Link to license!](https://unlicense.org/)  
 [Link to walkthrough demonstration!](https://drive.google.com/file/d/1TGI9fAFPfZnOXCepU5rEnUDYqxokDJoB/view)
 
 ## Description

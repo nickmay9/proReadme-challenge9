@@ -17,13 +17,13 @@ This is UCF Coding Bootcamp challenge 9. Generate a readme file using javascript
 Clone the repository down. Intitialize npm and install to use inquirer.
 
 ## Usage
-With Repo cloned, change to working directory in the terminal and use node.js to run the application.
+
 
 ## Contributing
-None
+With Repo cloned, change to working directory in the terminal and use node.js to run the application.
 
 ## Tests
-None
+
 
 ## License 
 This is free and unencumbered software released into the public domain.

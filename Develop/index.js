@@ -20,37 +20,6 @@ const questions = [
         }
     },
     {
-        type: 'editor',
-        name: 'description',
-        message: 'Please enter a description of the project.'
-    },
-    {
-        type: 'editor',
-        name: 'install',
-        message: 'Please enter the installation instructions.'
-    },
-    {
-        type: 'editor',
-        name: 'usage',
-        message: 'Please enter the usage instructions.'
-    },
-    {
-        type: 'editor',
-        name: 'contributor',
-        message: 'Please enter your contributor guidelines.'
-    },
-    {
-        type: 'editor',
-        name: 'test',
-        message: 'Please enter your tests.'
-    },
-    {
-        type: 'list',
-        name: 'license',
-        message: 'What license do you need?',
-        choices: ['Unlicense', 'MIT', 'GNU GPLv3']
-    },
-    {
         type: 'input',
         name: 'githubUsername',
         message: 'What is your Github Username? (Required)',
@@ -77,6 +46,37 @@ const questions = [
                 return false;
             }
         }
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Please enter a description of the project.'
+    },
+    {
+        type: 'input',
+        name: 'install',
+        message: 'Please enter the installation instructions.'
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Please enter the usage instructions.'
+    },
+    {
+        type: 'input',
+        name: 'contributor',
+        message: 'Please enter your contributor guidelines.'
+    },
+    {
+        type: 'input',
+        name: 'test',
+        message: 'Please enter your tests.'
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'What license do you need?',
+        choices: ['Unlicense', 'MIT', 'GNU GPLv3']
     }
 ];
 
